@@ -19,6 +19,7 @@
 		methods: {
 			itemclick(index){
 				this.currentIndex = index;
+				this.$emit('tabClick',index)
 			}
 		},
 		props: {
@@ -32,14 +33,14 @@
 		}
 </script>
 
-<style>
+<style scoped>
 	.tab-control{
 		display: flex;
 		text-align: center;
 		font-size: 15px;
 		height: 40px;
 		line-height: 40px;
-		background-color: #171212;
+		background-color: #eee;
 		
 	}
 	.tab-control-item{
