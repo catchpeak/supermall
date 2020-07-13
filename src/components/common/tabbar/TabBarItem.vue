@@ -21,6 +21,7 @@ export default {
 	data(){
 		return {
 			//isActive: false
+			//prepath: '/home'
 		}
 	},
 	computed: {
@@ -34,7 +35,9 @@ export default {
 	},
 	methods: {
 		itemclick(){
-			this.$router.replace(this.path)
+			if( this.path != this.$route.path){
+				this.$router.replace(this.path)				
+			}
 			console.log('itemclick')
 		}
 	}

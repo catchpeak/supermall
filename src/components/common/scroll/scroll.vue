@@ -34,24 +34,33 @@
 			})		
 			
 			//2监听
-			this.scroll.on('scroll', position => { 
-				this.$emit('scroll',position)
-				//console.log(position)
-			})
+			if(this.probeType === 2 || this.probeType === 3){
+				this.scroll.on('scroll', position => { 
+					this.$emit('scroll',position)
+					//console.log(position)
+				})
+			}
 			
-			this.scroll.on('pullingUp', () => {
-				this.$emit('pullingUp')
-				//console.log('上拉加载')
-			})
+			if(this.pullUpLoad){
+				this.scroll.on('pullingUp', () => {
+					this.$emit('pullingUp')
+					//console.log('上拉加载')
+				})
+			}
+			
+			
 			
 			//监听上拉加载
 		},
 		methods: {
 			scrollTo(x,y,time=500){
-				this.scroll.scrollTo(x,y,time)
+				this.scroll && this.scroll.scrollTo(x,y,time)
 			},
 			finishpullup(){
 				this.scroll.finishPullUp()
+			},
+			refresh(){
+				this.scroll && this.scroll.refresh()
 			}
 		}
 	}
