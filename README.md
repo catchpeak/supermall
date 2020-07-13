@@ -15,12 +15,7 @@ npm run serve
 npm run build
 ```
 
-### The page display
-```
-[show page(页面展示)](https://catchpeak.github.io/supermall/)
-```
-
-### PS
+### Complete progress
 ```
 The project has been completed to the home 
 page, and some details of the home page have not been realized
