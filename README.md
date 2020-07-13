@@ -17,8 +17,7 @@ npm run build
 
 ### The page display
 ```
-(页面展示)
-[页面展示](https://catchpeak.github.io/supermall/)
+[show page(页面展示)](https://catchpeak.github.io/supermall/)
 ```
 
 ### PS
